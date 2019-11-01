@@ -1,26 +1,15 @@
-const Person = require('./person')
-const Meetup = require('./meetup')
-const Chalk = require('chalk')
 const Database = require('./database')
+const Meetup = require('./meetup')
+const Person = require('./person')
+const stuffToDoAfterLoadingDB = Database.load('./meetup.json')
 
-const maria = new Person('Maria', 34)
-const bogdan = new Person('Bogdan', 33)
+//const maria = new Person('Maria', 34)
+//const bogdan = new Person('Bogdan', 33)
 
-printName = person => console.log(person.name)
+  const wtmb = new Meetup.create({name: 'Why?'})
+  const jenia = new Person('Jenia', 18)
 
-maria.greet(bogdan)
-
-  const wtmb = new Meetup('WTM Berlin')
-  maria.attend(wtmb)
-  bogdan.attend(wtmb)
-
+  jenia.attend(wtmb)
+  Database.save('./meetup.js', wtmb)
   wtmb.printAttendeeNames()
-
-  Database.save('meetup.json', wtmb)
-  Database.save('person.json', wtmb)
-
-  const loadedFile = Database.load('meetup.json')
-
-  //console.log(loadedFile)
-  console.log(loadedFile.name)
-  //console.log(Chalk.blue.bgRed.bold(wtmb.name))
+  console.log(wtmb.name)
