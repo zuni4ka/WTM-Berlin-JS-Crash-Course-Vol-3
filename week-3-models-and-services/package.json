@@ -1,14 +1,15 @@
 {
-  "name": "wtmb-js-crash-course",
+  "name": "week-3-models-and-services",
   "version": "1.0.0",
   "description": "",
-  "main": "lection-2.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Armagan Amcalar <armagan@amcalar.com>",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "flatted": "^2.0.1"
   }
 }
